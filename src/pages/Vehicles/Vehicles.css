@@ -1,0 +1,250 @@
+
+.vehicles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4xl);
+  padding: var(--spacing-xl);
+}
+
+.vehicles-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: var(--font-family-inter);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.vehicle-card-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  max-height: 180px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.vehicle-image-horizontal {
+  width: 450px;
+  margin-left: -60px;
+  object-fit: cover;
+}
+
+.vehicle-info-horizontal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-xl);
+}
+
+.vehicle-info-horizontal p {
+  text-align: start;
+}
+
+.carButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.carButtons button {
+  font-family: var(--font-family-inter);
+  font-size: 14px;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  color: white;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.carButtons button:hover {
+  background-color: #000000;
+}
+
+.carName {
+  font-family: var(--font-family-inter);
+  font-weight: var(--font-weight-semibold);
+  font-size: 20px;
+}
+
+.carVin {
+  font-weight: var(--font-weight-light);
+  font-size: 13px;
+}
+
+.tallerBtn, .verMasBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  color: white;
+  font-family: var(--font-family-inter);
+  border-radius: var(--radius-md);
+}
+
+.tallerBtn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/taller.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.verMasBtn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/engranaje.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  max-width: 90%;
+  padding: 2rem;
+  background-color: var(--bg-card);
+  color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.vehicle-form {
+    box-shadow: none;
+    padding: 0px;
+}
+
+
+
+.vehicle-form input::placeholder {
+  color: #aaa;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.modal-buttons button {
+  padding: var(--spacing-sm) 1rem;
+  background-color: var(--border-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.modal-buttons button:hover {
+  background-color: #555;
+}
+
+.cancel-btn {
+  background-color: #555;
+}
+
+.cancel-btn:hover {
+  background-color: #777;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+@media (max-width: 700px) {
+  .vehicle-card-horizontal {
+    flex-direction: column;
+    text-align: center;
+    max-height: 500px;
+    gap: 0px;
+  }
+
+  .vehicle-image-horizontal {
+    align-self: center;
+    width: 400px;
+    margin-left: 0;
+    object-fit: cover;
+  }
+
+  .vehicle-info-horizontal {
+    padding: var(--spacing-xl);
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 440px) {
+  .vehicle-card-horizontal {
+    border-radius: var(--radius-xl);
+    max-height: none;
+  }
+
+  .vehicle-image-horizontal {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .vehicle-info-horizontal {
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+  }
+
+  .carName {
+    font-size: 17px;
+  }
+
+  .carVin {
+    font-size: 12px;
+  }
+
+  .carButtons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-sm);
+  }
+
+  .carButtons button {
+    font-size: 17px;
+    padding: var(--spacing-xs) var(--spacing-md);
+    height: 40px;
+  }
+
+  .tallerBtn::before,
+  .verMasBtn::before {
+    width: 17px;
+    height: 17px;
+  }
+}
