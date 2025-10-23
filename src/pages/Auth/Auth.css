@@ -1,0 +1,74 @@
+
+.mainAuth{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  width: 300px;
+  padding: var(--spacing-2xl);
+  background-color: var(--bg-card);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  font-size: 16px;
+  color: #E0E0E0;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-secondary);
+  background-color: #24262B;
+  outline: none;
+  transition: border 0.3s, background-color 0.3s;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  border-color: #fff;
+  background-color: #2A2C32;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.changeForm {
+  background-color: transparent;
+  color: white;
+  transition: 200ms ease;
+}
+
+.changeForm:hover {
+  background-color: transparent;
+  color: var(--text-light);
+}
+
+.changeForm:focus,
+.changeForm:focus-visible {
+  outline: none;
+  border: none;
+}
