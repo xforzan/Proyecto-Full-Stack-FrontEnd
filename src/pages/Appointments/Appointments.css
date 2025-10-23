@@ -1,0 +1,226 @@
+.appointments-container {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-xl);
+}
+
+.no-appointments {
+  margin: auto;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: var(--font-family-inter);
+}
+
+.appointment-card-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  max-height: 300px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.appointment-car-image-horizontal {
+  width: 450px;
+  object-fit: cover;
+}
+
+.appointment-info-horizontal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-xl);
+}
+
+.appointment-info-horizontal p {
+  text-align: start;
+}
+
+.appointment-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.appointment-data h2 {
+  font-size: 20px;
+  font-weight: var(--font-weight-semibold);
+  color: white;
+}
+
+.appointment-name {
+  font-family: var(--font-family-inter);
+  font-weight: var(--font-weight-semibold);
+  font-size: 20px;
+  color: white;
+}
+
+.appointment-date,
+.appointment-vehicle,
+.appointment-vin,
+.appointment-client,
+.appointment-email {
+  font-weight: var(--font-weight-light);
+  font-size: 13px;
+  text-align: left;
+  padding: 0px;
+  color: var(--text-secondary);
+}
+
+.appointment-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.appointment-buttons button {
+  font-family: var(--font-family-inter);
+  font-size: 14px;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  color: white;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.appointment-buttons button:hover {
+  background-color: #000000;
+}
+
+.appointment-date,
+.appointment-time {
+  font-size: 15px;
+  font-weight: var(--font-weight-semibold);
+  color: white;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.appointment-time::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: var(--spacing-sm);
+  background-image: url('/reloj.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.appointment-date::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: var(--spacing-sm);
+  background-image: url('/fecha.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.verMasBtn2 {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.verMasBtn2::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/cancel.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.appointment-status {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-lg);
+  margin-top: var(--spacing-sm);
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  color: white;
+  border-radius: 12px;
+  background-color: #5A5A5A;
+}
+
+.appointment-status.pendiente { background-color: var(--color-warning); }
+.appointment-status.confirmada { background-color: var(--color-success); }
+.appointment-status.cancelada { background-color: var(--color-error); }
+
+
+@media (max-width: 700px) {
+  .appointment-card-horizontal {
+    flex-direction: column;
+    text-align: center;
+    max-height: 500px;
+  }
+
+  .appointment-car-image-horizontal {
+    align-self: center;
+    width: 400px;
+    margin-left: 0;
+    object-fit: cover;
+  }
+
+  .appointment-info-horizontal {
+    padding: var(--spacing-xl);
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 440px) {
+  .appointment-card-horizontal {
+    border-radius: var(--radius-xl);
+    max-height: none;
+  }
+
+  .appointment-car-image-horizontal {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .appointment-info-horizontal {
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+  }
+
+  .appointment-date,
+  .appointment-vehicle,
+  .appointment-vin,
+  .appointment-client,
+  .appointment-email {
+    font-size: 17px;
+  }
+
+  .appointment-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-sm);
+  }
+
+  .appointment-buttons button {
+    font-size: 17px;
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+  .verMasBtn2{
+    height: 40px;
+  }
+}
