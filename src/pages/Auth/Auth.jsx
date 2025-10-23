@@ -18,11 +18,11 @@ const Auth = () => {
     setServerError(null);
 
     if (isLogin) {
-      // Login
+
       const result = await login({ email: data.email, password: data.password });
       if (!result.success) return setServerError(result.message);
     } else {
-      // Registro
+
       if (data.password !== data.confirmPassword) {
         return setServerError("Las contraseñas no coinciden");
       }
