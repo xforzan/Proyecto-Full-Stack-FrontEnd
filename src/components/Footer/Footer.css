@@ -1,0 +1,11 @@
+footer {
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--spacing-xl);
+  background-color: var(--bg-secondary);
+}
+
+p {
+  text-align: center;
+}
