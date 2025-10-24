@@ -70,7 +70,7 @@ npm run dev
 
 <div align="center">
 
-💻 Desarrollado como Proyecto 3 - BackEnd
+💻 Desarrollado como Proyecto 3 - FrontEnd
 Con ❤️ para aprender y crecer🚀
 
 </div>
