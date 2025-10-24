@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  --color-primary: #1E90FF;
   --color-secondary: #646cff;
   --color-accent: #535bf2;
   
-  --bg-primary: #0B0D0F;
   --bg-secondary: #181A1E;
   --bg-tertiary: #1F2127;
   --bg-card: #1F2127;
@@ -45,10 +43,6 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  
-  --breakpoint-mobile: 440px;
-  --breakpoint-tablet: 700px;
-  --breakpoint-desktop: 1024px;
 }
 
 
