@@ -25,7 +25,6 @@ const Schedule = () => {
   useEffect(() => {
     if (!vehicles || vehicles.length === 0) return;
     const vehicle =  vehicles.find((v) => v._id == _id);
-    console.log(vehicle)
     if (vehicle) {
       setCar(vehicle);
       setLoading(false);
