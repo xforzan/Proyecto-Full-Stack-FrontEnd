@@ -38,7 +38,7 @@ Esto permite ofrecer una experiencia fluida, rápida y personalizada tanto para 
 5. El usuario puede ver los datos de sus vehículos.
 6. El usuario puede crear, consultar o eliminar citas desde la interfaz.
 7. Todos los cambios se envían al backend mediante **Fetch API** y se reflejan en tiempo real.
-8. El personal del taller puede visualizar los vehículos y citas de todos los clientes para gestionar operaciones internas.
+8. El personal del taller puede visualizar las citas de todos los clientes para gestionar operaciones internas.
 
 
 ---
