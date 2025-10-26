@@ -29,6 +29,16 @@ Esto permite ofrecer una experiencia fluida, rápida y personalizada tanto para 
 - 🧭 **Arquitectura basada en componentes** Interfaz dividida en componentes reutilizables, mejorando la escalabilidad, el rendimiento y la claridad del proyecto.
 
 
+## 🔄 Flujo de la Aplicación
+
+1. El usuario inicia sesión y accede a su perfil.
+2. Puede cambiar su foto de perfil.
+3. Puede registrar un vehículo ingresando su VIN.
+4. El sistema obtiene automáticamente los datos del vehículo desde la base de datos.
+5. El usuario puede ver los datos de sus vehículos.
+6. El usuario puede crear, consultar o eliminar citas desde la interfaz.
+7. Todos los cambios se envían al backend mediante **Fetch API** y se reflejan en tiempo real.
+8. El personal del taller puede visualizar los vehículos y citas de todos los clientes para gestionar operaciones internas.
 
 
 ---
